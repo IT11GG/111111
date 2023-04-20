@@ -1,0 +1,62 @@
+body {
+	margin: 0;
+}
+.ok1 {
+	position: relative;
+	color: white;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.ok2 {
+	display: flex;
+	gap: 20px;
+	min-width: 700px;
+	animation: slide 2s infinite;
+	animation-delay: 2s;
+}
+.anime2 {
+	animation: slide2 2s infinite;
+	animation-delay: 4s;
+}
+.ok2 > img {
+	width:50%;
+	object-fit: cover;
+}
+.ok3 {
+	display: flex; 
+	width: 700px;
+	overflow: hidden;
+}
+
+body{
+	background-image: url(images/fone.jfif);
+	
+	
+}
+
+@keyframes slide {
+	0% {
+		transform: translate(700px, 0);
+	}	
+	
+	100% {
+		transform: translate(0);
+	}
+} 
+@keyframes slide2 {
+	0% {
+		transform: translate(-700px, 0);
+	}	
+	
+	100% {
+		transform: translate(0);
+	}
+} 
+
+@media screen and (max-width: 480px) {
+
+.ok2 > img {width: 100%;}
+	.ok2 {display:block;}
+}
