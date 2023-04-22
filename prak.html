@@ -2,44 +2,66 @@
 <html>
 <head>
 <link rel="stylesheet" href="prak.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/css/splide.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js"></script>
 </head>
 <body>
+
 <header class="ok1">
-	<div class="ok3">
-		<div class="ok2">
-			<div>
-			<h1>Lorem</h1>
-			<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
-			</div>
-			<img src="images/mebl1.jfif">
-		</div>
-		<div class="ok2 anime2">
-			<div>
-			<h1>Lorem</h1>
-			<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+	<div class="logo1">
+	<a href="prak.html"><img src="images/logo1.png"></a>
+	</div>
+	<div class="button1">
+		<a href="katal1.html" class="floating-button">Каталог</a>
+		<a href="zamov.html" class="floating-button">Замовлення</a>
+		<a href="kabin.html" class="floating-button">Мій кабінет</a>
+		<a href="zwazok1.html" class="floating-button">зв'язок</a>
+	</div>
+	<div class="splide ok3">
+	<div class="splide__track">
+		<ul class="splide__list">
+			<li class="splide__slide">
+				<div class="ok2">
+					<div class="text1">
+					<h1>Шафи</h1>
+					<p>Шафи саме найголовніше в домі для зберігання речей зробіть свій стиль в думках та перенесіть в реальність!</p>
+					</div>
+					<img src="images/mebl1.jfif">
+				</div>
+			</li>
+			<li class="splide__slide">
+					<div class="ok2">
+			<div class="text1">
+			<h1>Столи</h1>
+			<p>Столи для дому як не як потрібні для харчування та роботи і зручності замовивши у нас столи ви відчуєте райський спів!</p>
 			</div>
 			<img src="images/mebl2.jfif">
 		</div>
-		<div class="ok2" style="animation-delay: 6s;">
-			<div>
-			<h1>Lorem</h1>
-			<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+			</li>
+			<li class="splide__slide">
+				<div class="ok2">
+				<div class="text1">
+				<h1>Квадратні полки</h1>
+				<p>Полки це могутніша зроя за місце в домі цей стиль дуже крутій та модний тому замовляйте у нас!</p>
+				</div>
+				<img src="images/mebl3.jfif">
 			</div>
-			<img src="images/mebl3.jfif">
-		</div>
-		<div class="ok2" style="animation-delay: 8s;">
-			<div>
-			<h1>Lorem</h1>
-			<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
-			</div>
-			<img src="images/mebl4.jfif">
-		</div>
+			</li>
+			<li class="splide__slide">
+				<div class="ok2">
+					<div class="text1">
+					<h1>Лавочки</h1>
+					<p>Лавочки це велика прикраса для двору особливо для вулиці воли виглядають дуже стилічно а також дорого а вам обійдеться нормально!</p>
+					</div>
+					<img src="images/mebl4.jfif">
+				</div>
+			</li>
+		</ul>
+  </div>
 	</div>
 </header>
-<!-- <div><img src="images/mebl1.jfif"></div> -->
-<!-- <div><img src="images/mebl2.jfif"></div> -->
-<!-- <br> -->
-<!-- <div><img src="images/mebl3.jfif"></div> -->
-<!-- <div><img src="images/mebl4.jfif"></div> -->
+<script>
+  new Splide( '.splide' ).mount();
+</script>
 </body>
 </html>
