@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.button1 {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+.logo1{
+	position: absolute;
+	top: 2px;
+	left:3px;
+
+}
+.logo1 img {
+	height:150px;
+	width:170px;
+	object-fit: cover;
+}
+.floating-button {
+  text-decoration: none;
+  display: inline-block;
+  width: 140px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #524f4e;
+  background: white;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+  transition: .3s;
+}
+.floating-button:hover {
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+  color: white;
+  transform: translateY(-7px);
+}
+body {
+	margin: 0;
+	background-image: url(images/fone.jfif);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.text{
+	color:white;
+	margin:100px;
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js"></script>
+</head>
+<body>
+
+<header class="ok1">
+	<div class="logo1">
+	<a href="prak.html"><img src="images/logo1.png"></a>
+	</div>
+	<div class="button1">
+		<a href="katal1.html" class="floating-button">Каталог</a>
+		<a href="zamov.html" class="floating-button">Замовлення</a>
+		<a href="kabin.html" class="floating-button">Мій кабінет</a>
+		<a href="zwazok1.html" class="floating-button">зв'язок</a>
+	</div>
+	<div align="center" class="text"><h1>Ой...</h1></div>
+	<div align="center" class="text"><p>Вибачте, ви ще не зробили жодного замовлення!<br> Зробіть це зараз!</p></div>
+	</header>
+	</body>
+	</html>
