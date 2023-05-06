@@ -2,6 +2,125 @@
 <html>
 <head>
 <style>
+h1{
+margin-top:50px;
+color:white;
+}
+.inline-block{
+  display:flex;
+  max-width: 1000px;
+	margin: 0 auto;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+body {
+    overflow-x: hidden;
+margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px 10px;
+  transition: background 0.4s ease-in;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
+
+}
+input[type=radio] {
+  display: none;
+}
+.card {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  margin-left:1px;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+.container {
+  width: 100%;
+  max-width: 100%;
+  max-height: 250px;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.cards {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+#item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
+  transform: translatex(-40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+#item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-1 {
+  transform: translatex(40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+#item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+#item-1:checked ~ .cards #song-1 img, #item-2:checked ~ .cards #song-2 img, #item-3:checked ~ .cards #song-3 img {
+  box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+}
+
+#item-4:checked ~ .cards #song-6, #item-5:checked ~ .cards #song-4, #item-6:checked ~ .cards #song-5 {
+  transform: translatex(-40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+#item-4:checked ~ .cards #song-5, #item-5:checked ~ .cards #song-6, #item-6:checked ~ .cards #song-4 {
+  transform: translatex(40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+#item-4:checked ~ .cards #song-4, #item-5:checked ~ .cards #song-5, #item-6:checked ~ .cards #song-6 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+#item-4:checked ~ .cards #song-4 img, #item-5:checked ~ .cards #song-5 img, #item-6:checked ~ .cards #song-6 img {
+  box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+}
+
+#item-7:checked ~ .cards #song-9, #item-8:checked ~ .cards #song-7, #item-9:checked ~ .cards #song-8 {
+  transform: translatex(-40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+#item-7:checked ~ .cards #song-8, #item-8:checked ~ .cards #song-9, #item-9:checked ~ .cards #song-7 {
+  transform: translatex(40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+#item-7:checked ~ .cards #song-7, #item-8:checked ~ .cards #song-8, #item-9:checked ~ .cards #song-9 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+#item-7:checked ~ .cards #song-7 img, #item-8:checked ~ .cards #song-8 img, #item-9:checked ~ .cards #song-9 img {
+  box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+}
+
 .button1 {
 	position: absolute;
 	top: 10px;
@@ -53,6 +172,41 @@ body {
 	color:white;
 	margin:100px;
 }
+.a-text {
+  color: #000;
+  position: relative;
+  text-decoration: none;
+ font-size:24px;
+ margin-top:3px;
+ color:gray;
+}
+
+.a-text::before {
+  background: hsl(45 100% 70%);
+  content: "";
+  inset: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.a-text:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Presentational styles */
+body {
+  display: grid;
+  font-family: system-ui, sans;
+  font-size: 3.5rem;
+  font-weight: 800;
+  height: 100vh;
+  place-items: center;
+}
+
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js"></script>
 </head>
@@ -68,8 +222,80 @@ body {
 		<a href="kabin.html" class="floating-button">Мій кабінет</a>
 		<a href="zwazok1.html" class="floating-button">зв'язок</a>
 	</div>
-	<div align="center" class="text"><p>Всі каталоги можна замовити за номером в вкладці зв'язок!</p></div>
-	
 	</header>
+	
+	<a href="#" class="a-text"  onclick="showMessage()">Клікніть по 3 картинкам для подробиці!</a>
+	<div class="inline-block">
+	<div class="container">
+    <input type="radio" name="slider" id="item-1">
+    <input type="radio" name="slider" id="item-2">
+    <input type="radio" name="slider" id="item-3" checked>
+    <div class="cards">
+      <label for="item-1" id="song-1" class="card">
+        <img src="meblkatal1.png">
+      </label>
+      <label for="item-2" id="song-2" class="card">
+        <img src="meblkatal2.png">
+      </label>
+      <label for="item-3" id="song-3" class="card">
+        <img src="meblkatal3.png">
+      </label>
+    </div>
+  </div>
+  	<div class="container">
+    <input type="radio" name="slider" id="item-4">
+    <input type="radio" name="slider" id="item-5">
+    <input type="radio" name="slider" id="item-6" checked>
+    <div class="cards">
+      <label for="item-4" id="song-4" class="card">
+        <img src="meblkatal4.png">
+      </label>
+      <label for="item-5" id="song-5" class="card">
+        <img src="meblkatal5.png">
+      </label>
+      <label for="item-6" id="song-6" class="card">
+        <img src="meblkatal6.png">
+      </label>
+    </div>
+  </div>
+  	<div class="container">
+    <input type="radio" name="slider" id="item-7">
+    <input type="radio" name="slider" id="item-8">
+    <input type="radio" name="slider" id="item-9" checked>
+    <div class="cards">
+      <label for="item-7" id="song-7" class="card">
+        <img src="meblkatal7.png">
+      </label>
+      <label for="item-8" id="song-8" class="card">
+        <img src="meblkatal8.png">
+      </label>
+      <label for="item-9" id="song-9" class="card">
+        <img src="meblkatal9.png">
+      </label>
+    </div>
+  </div>
+  
+   	<div class="container" style="display: none;">
+    <input type="radio" name="slider" id="item-7">
+    <input type="radio" name="slider" id="item-8">
+    <input type="radio" name="slider" id="item-9" checked>
+    <div class="cards">
+      <label for="item-7" id="song-7" class="card">
+        <img src="meblkatal7.png">
+      </label>
+      <label for="item-8" id="song-8" class="card">
+        <img src="meblkatal8.png">
+      </label>
+      <label for="item-9" id="song-9" class="card">
+        <img src="meblkatal9.png">
+      </label>
+    </div>
+  </div>
+  </div>
+  <script>
+    function showMessage() {
+        alert("Нажми на картинку а не на текст!");
+      }
+</script>
 	</body>
 	</html>
