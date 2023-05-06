@@ -206,7 +206,9 @@ body {
   height: 100vh;
   place-items: center;
 }
-
+@media screen and (max-width: 480px) {
+.ok2 > img {width: 100%;}
+	body {display:block;}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js"></script>
 </head>
@@ -223,7 +225,7 @@ body {
 	</div>
 	</header>
 	
-	<a href="#" class="a-text"  onclick="showMessage()">Клікніть по 3 картинкам для подробиці!</a>
+	<a href="#" class="a-text"  onclick="showMessage()" align="center">Клікніть по 3 картинкам для подробиці!</a>
 	<div class="inline-block">
 	<div class="container">
     <input type="radio" name="slider" id="item-1">
@@ -296,6 +298,5 @@ body {
         alert("Нажми на картинку а не на текст!");
       }
 </script>
-	</body>
-	</html>
-
+</body>
+</html>
