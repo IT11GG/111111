@@ -7,7 +7,7 @@ body {
 .ok1 {
 	position: relative;
 	color: white;
-	min-height: 100vh;
+	min-height: 80vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -60,7 +60,7 @@ body {
 	width:170px;
 	object-fit: cover;
 }
-.floating-button {
+.desktop {
   text-decoration: none;
   display: inline-block;
   width: 140px;
@@ -79,20 +79,170 @@ body {
   box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
   transition: .3s;
 }
-.floating-button:hover {
+.desktop:hover {
   background: #2EE59D;
   box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
   color: white;
   transform: translateY(-7px);
 }
+.desktop{
+  display: inline-block;
+}
 
+.mobile{
+  display: none;
+}
+
+@media (max-width: 920px) {
+  .desktop{
+    display: none;
+  }
+  
+  .mobile{
+    display: block;
+	display: inline-block;
+  }
+}
+
+.mobile{
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 170px;
+  height:0px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.mobile span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.mobile span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.mobile:hover span {
+  padding-right: 25px;
+}
+
+.mobile:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.card{
+  width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 10px 23px 0px rgba(0,0,0,0.14);
+  -moz-box-shadow: 10px 10px 23px 0px rgba(0,0,0,0.14);
+  box-shadow: 10px 10px 23px 0px rgba(0,0,0,0.14);
+  margin: auto;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  height: 360px;
+  display: inline-block;
+  transform: scale(.9);
+  transition: all .3s;
+}
+
+.card:hover{
+  transform: scale(.95);
+}
+
+.card-top {
+  width: 100%;
+  height: 270px;
+  background-color: #f1f1f1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card-top > img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+.card-mid {
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  overflow:hidden;
+  border-bottom-right-radius: 10px;
+  transition: all .3s;
+}
+.card-mid h4{
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+.card-mid label{
+  margin: 0;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: grey;
+}
+.card-image{
+  transition: all .3s;
+}
+.card:hover .card-image {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.card-desc {
+  transition: all .3s .2s;
+  border-left: 0px solid #b4deac;
+}
+.card:hover .card-desc {
+  border-left: 2px solid #b4deac;
+  padding-left: 8px;
+}
+.card-blur-zone {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 15px;
+  background-color: rgba(255, 255, 255, .8);
+
+}
 @media screen and (max-width: 920px) {
-.button1 {
-	display: none;
+  body{
+    background-image: url(fone1.jfif);
+  }
 }
-.ok3{
-	margin-top:60px;
+.textlol{
+	color:#1E90FF;
+	
 }
-}
- 
- 
