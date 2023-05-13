@@ -21,7 +21,7 @@
 	width:170px;
 	object-fit: cover;
 }
-.floating-button {
+.desktop {
   text-decoration: none;
   display: inline-block;
   width: 140px;
@@ -40,11 +40,69 @@
   box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
   transition: .3s;
 }
-.floating-button:hover {
+.desktop:hover {
   background: #2EE59D;
   box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
   color: white;
   transform: translateY(-7px);
+}
+.desktop{
+  display: inline-block;
+}
+
+.mobile{
+  display: none;
+}
+
+@media (max-width: 920px) {
+  .desktop{
+    display: none;
+  }
+  
+  .mobile{
+    display: block;
+	display: inline-block;
+  }
+}
+
+.mobile{
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 170px;
+  height:100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.mobile span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.mobile span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.mobile:hover span {
+  padding-right: 25px;
+}
+
+.mobile:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 body {
 	margin: 0;
@@ -150,6 +208,7 @@ label a{
     color: #fff;
 }
 </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js"></script>
 </head>
 <body>
@@ -159,9 +218,14 @@ label a{
 	<a href="prak.html"><img src="logo1.png"></a>
 	</div>
 	<div class="button1">
-		<a href="katal1.html" class="floating-button">Каталог</a>
-		<a href="kabin.html" class="floating-button">Мій кабінет</a>
-		<a href="zwazok1.html" class="floating-button">зв'язок</a>
+		<a href="katal1.html" class="desktop">Каталог</a>
+		<a href="kabin.html" class="desktop">Мій кабінет</a>
+		<a href="zwazok1.html" class="desktop">зв'язок</a>
+		<div class="button2">
+		<a href="katal1.html"><button class="mobile"><span>Каталог </span></button></a>
+		<a href="kabin.html"><button class="mobile"><span>Кабінет </span></button></a>
+		<a href="zwazok1.html"><button class="mobile"><span>Зв'язок </span></button></a>
+		</div>
 	</div>
 <div class="container">
         <div class="form-box">
