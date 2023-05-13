@@ -18,7 +18,7 @@
 	width:170px;
 	object-fit: cover;
 }
-.floating-button {
+.desktop {
   text-decoration: none;
   display: inline-block;
   width: 140px;
@@ -37,11 +37,69 @@
   box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
   transition: .3s;
 }
-.floating-button:hover {
+.desktop:hover {
   background: #2EE59D;
   box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
   color: white;
   transform: translateY(-7px);
+}
+.desktop{
+  display: inline-block;
+}
+
+.mobile{
+  display: none;
+}
+
+@media (max-width: 920px) {
+  .desktop{
+    display: none;
+  }
+  
+  .mobile{
+    display: block;
+	display: inline-block;
+  }
+}
+
+.mobile{
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 170px;
+  height:100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.mobile span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.mobile span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.mobile:hover span {
+  padding-right: 25px;
+}
+
+.mobile:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 body {
 	margin: 0;
@@ -49,11 +107,58 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-.text{
-	color:white;
-	margin:100px;
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Cursor */
+.cursor{
+    position: relative;
+    width: 24em;
+    margin: 100 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 30px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+/* Animation */
+.typewriter-animation {
+  animation: 
+    typewriter 5s steps(50) 1s 1 normal both, 
+    blinkingCursor 500ms steps(50) infinite normal;
+}
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blinkingCursor{
+  from { border-right-color: rgba(255,255,255,.75); }
+  to { border-right-color: transparent; }
+}
+/* Global */
+body { margin-top: 4em; padding: 5em; color: #f1f1f1; font-family: 'Anonymous Pro'}
+.zwazok{
+color:#87CEEB;
+margin-top:130px;
+}
+.face{
+  text-decoration: none;
+  color: inherit;
+  cursor: auto;
+  color:#4169E1;
+}
+.insta{
+  text-decoration: none;
+  color: inherit;
+  cursor: auto;
+  color:#FF8C00;
+}
+.ok13{
+margin-top:130px;
 }
 </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js"></script>
 </head>
 <body>
@@ -63,13 +168,21 @@ body {
 	<a href="prak.html"><img src="logo1.png"></a>
 	</div>
 	<div class="button1">
-		<a href="katal1.html" class="floating-button">Каталог</a>
-		<a href="kabin.html" class="floating-button">Мій кабінет</a>
-		<a href="zwazok1.html" class="floating-button">зв'язок</a>
+		<a href="katal1.html" class="desktop">Каталог</a>
+		<a href="kabin.html" class="desktop">Мій кабінет</a>
+		<a href="zwazok1.html" class="desktop">зв'язок</a>
+		<div class="button2">
+		<a href="katal1.html"><button class="mobile"><span>Каталог </span></button></a>
+		<a href="kabin.html"><button class="mobile"><span>Кабінет </span></button></a>
+		<a href="zwazok1.html"><button class="mobile"><span>Зв'язок </span></button></a>
+		</div>
 	</div>
-	<div align="center" class="text"><h1>Звязок в підтримку&замовлення:</h1></div>
-	<div align="center" class="text"><p>Номер телефону:+380930507708</p></div>
-	<div align="center" class="text"><p>Пошта: 10rom86@gmail.com</p></div>
+	<div><p class="cursor typewriter-animation">Звязок в підтримку або замовлення можна за номером або поштою</p></div>
+	<div><p class="cursor typewriter-animation"><a href="tel:+380937278498">Номер телефону:+380937278498</a></p></div>
+	<div><p class="cursor typewriter-animation"><a href="mailto:10rom86@gmail.com">Пошта:10rom86@gmail.com</a></p></div>
+	<h1 class="zwazok" align="center">Ми завжди раді вам допомогти щоб не сталося!<h1>
+	<h1 class="zwazok" align="center">Чекаємо на ваше замовлення!;)<h1>
+	<h1 align="center" class="ok13">Ми тут!:  <a href="https://m.facebook.com/groups/2236061796705092/?ref=share" class="face">Facebook</a>  <a href="https://instagram.com/luka_roman86?igshid=NTc4MTIwNjQ2YQ==" class="insta">instagram!</a></h1>
 	</header>
 	</body>
 	</html>
