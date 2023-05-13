@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>меблі львів</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="prak.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/css/splide.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js"></script>
@@ -12,9 +14,14 @@
 	<a href="prak.html"><img src="logo1.png"></a>
 	</div>
 	<div class="button1">
-		<a href="katal1.html" class="floating-button">Каталог</a>
-		<a href="kabin.html" class="floating-button">Мій кабінет</a>
-		<a href="zwazok1.html" class="floating-button">зв'язок</a>
+		<a href="katal1.html" class="desktop">Каталог</a>
+		<a href="kabin.html" class="desktop">Мій кабінет</a>
+		<a href="zwazok1.html" class="desktop">зв'язок</a>
+		<div class="button2">
+		<a href="katal1.html"><button class="mobile"><span>Каталог </span></button></a>
+		<a href="kabin.html"><button class="mobile"><span>абінет </span></button></a>
+		<a href="zwazok1.html"><button class="mobile"><span>Зв'язок </span></button></a>
+		</div>
 	</div>
 	<div class="splide ok3">
 	<div class="splide__track">
@@ -59,10 +66,93 @@
   </div>
 	</div>
 </header>
+	<div>
+	<h1 class="textlol" align="center">Наша праця</h1>
+	</div>
+	<div align="center">
+  <div class="card" id="card1">
+    <div class="card-top"><img class="card-image" alt="" src="" /></div>
+    <div class="card-mid">
+      <h4 class="card-title">Titre</h4>
+      <label class="card-desc">Description</label>
+      <div class="card-blur-zone"></div>
+    </div>
+  </div>
+  <div class="card" id="card2">
+    <div class="card-top"><img class="card-image" alt="" src="" /></div>
+    <div class="card-mid">
+      <h4 class="card-title">Titre</h4>
+      <label class="card-desc">Description</label>
+      <div class="card-blur-zone"></div>
+    </div>
+  </div align="center">
+  <div class="card" id="card3">
+    <div class="card-top"><img class="card-image" alt="" src="" /></div>
+    <div class="card-mid">
+      <h4 class="card-title">Titre</h4>
+      <label class="card-desc">Description</label>
+      <div class="card-blur-zone"></div>
+    </div>
+  </div>
+</main>
+</div>
 </div>
 <script>
   new Splide( '.splide' ).mount();
+  class YBCard {
+
+  constructor(id, title, description, image) {
+    this.idCard = id
+    this.titre = title
+    this.description = description
+    this.image = image
+  }
+
+  initCard() {
+    this.updateDom();
+    this.activateListeners();
+  }
+
+  updateDom() {
+    var cardDom = document.getElementById(this.idCard)
+    if(cardDom.hasChildNodes()){
+      var cardDomImage = cardDom.getElementsByClassName('card-image')[0]
+      cardDomImage.src = this.image;
+
+      var cardDomTitle = cardDom.getElementsByClassName('card-title')[0]
+      cardDomTitle.innerHTML = this.titre;
+
+      var cardDomDesc = cardDom.getElementsByClassName('card-desc')[0]
+      cardDomDesc.innerHTML = this.description;
+    }
+  }
+
+  activateListeners() {
+    var cardDom = document.getElementById(this.idCard)
+    cardDom.addEventListener("mouseover", function( event ) {
+      var cardDomTitle = cardDom.getElementsByClassName('card-title')[0]
+      var cardDomDesc = cardDom.getElementsByClassName('card-desc')[0]
+      var cardDomMiddle = cardDom.getElementsByClassName('card-mid')[0]
+      var cardMiddleHeight = cardDomTitle.offsetHeight + cardDomDesc.offsetHeight;
+      cardDomMiddle.style.height = cardMiddleHeight + 15 + "px";
+    }, false);
+
+    cardDom.addEventListener("mouseout", function( event ) {
+      var cardDomMiddle = cardDom.getElementsByClassName('card-mid')[0]
+      cardDomMiddle.style.height = 50 + "px";
+    }, false);
+  }
+}
+
+var card1 = new YBCard("card1", "Title card 1", "ця кімната виглядає круто знаєте чому? тому що тут є полички, так білі ", "cart1.jpg")
+card1.initCard();
+
+var card2 = new YBCard("card2", "Title card 2", "ця кухня біла тому що вона популярна білий лібше виглядає ніж чорний!", "cart2.jpg");
+card2.initCard();
+
+var card3 = new YBCard("card3", "Title card 3", "Цей тип НАЙПОПУЛЯРНІШИЙ за інших, 83% людей використовує іменно цю моду!", "cart3.jpg");
+card3.initCard();
+
 </script>
 </body>
 </html>
-
