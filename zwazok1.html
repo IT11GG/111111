@@ -2,22 +2,23 @@
 <html>
 <head>
 <style>
+@media screen and (max-width: 920px) {
+  body{
+    background-image: url(images/fone1.jfif);
+  }
+}
 .button1 {
 	position: absolute;
 	top: 10px;
 	right: 10px;
 }
-.logo1{
-	position: absolute;
-	top: 2px;
-	left:3px;
-
-}
-.logo1 img {
-	height:150px;
-	width:170px;
-	object-fit: cover;
-}
+@media (max-width: 920px) {
+  .mobile{
+   font-size:14px;
+   height:60px;
+   width:80px;
+  }
+  }
 .desktop {
   text-decoration: none;
   display: inline-block;
@@ -61,17 +62,16 @@
 	display: inline-block;
   }
 }
-
 .mobile{
   border-radius: 4px;
   background-color: #f4511e;
   border: none;
   color: #FFFFFF;
   text-align: center;
-  font-size: 28px;
+  font-size: 14px;
   padding: 20px;
-  width: 170px;
-  height:100px;
+  width: 80px;
+  height:60px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
@@ -103,7 +103,7 @@
 }
 body {
 	margin: 0;
-	background-image: url(fone.jfif);
+	background-image: url(images/fone.jfif);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -157,6 +157,21 @@ margin-top:130px;
 .ok13{
 margin-top:130px;
 }
+@media (max-width: 1030px) {
+  .cursor typewriter-animation, .typewriter-animation, .cursor{
+    display: none;
+  }
+}
+@media (min-width: 1030px) {
+  .phonetext{
+    display: none;
+  }
+}
+@media screen and (max-width: 920px) {
+  body{
+    background-image: url(images/fone1.jfif);
+  }
+}
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js"></script>
@@ -164,22 +179,25 @@ margin-top:130px;
 <body>
 
 <header class="ok1">
-	<div class="logo1">
-	<a href="prak.html"><img src="logo1.png"></a>
-	</div>
 	<div class="button1">
+		<a href="prak.html" class="desktop">Головна</a>
 		<a href="katal1.html" class="desktop">Каталог</a>
 		<a href="kabin.html" class="desktop">Мій кабінет</a>
-		<a href="zwazok1.html" class="desktop">зв'язок</a>
+		<a href="zwazok1.html" class="desktop">Зв'язок</a>
 		<div class="button2">
+		<a href="prak.html"><button class="mobile"><span>Головна</span></button></a>
 		<a href="katal1.html"><button class="mobile"><span>Каталог </span></button></a>
 		<a href="kabin.html"><button class="mobile"><span>Кабінет </span></button></a>
 		<a href="zwazok1.html"><button class="mobile"><span>Зв'язок </span></button></a>
 		</div>
 	</div>
-	<div><p class="cursor typewriter-animation">Звязок в підтримку або замовлення можна за номером або поштою</p></div>
+	
+	<div><p class="cursor typewriter-animation">Зв`язок в підтримку або замовлення можна за номером або поштою</p></div>
 	<div><p class="cursor typewriter-animation"><a href="tel:+380937278498">Номер телефону:+380937278498</a></p></div>
 	<div><p class="cursor typewriter-animation"><a href="mailto:10rom86@gmail.com">Пошта:10rom86@gmail.com</a></p></div>
+	<h1 class="phonetext">Зв`язок в підтримку або замовлення можна за номером або поштою</h1>
+	<h1 class="phonetext"><a href="tel:+380937278498">Номер телефону:+380937278498</a></h1>
+	<h1 class="phonetext"><a href="mailto:10rom86@gmail.com">Пошта:10rom86@gmail.com</a></h1>
 	<h1 class="zwazok" align="center">Ми завжди раді вам допомогти щоб не сталося!<h1>
 	<h1 class="zwazok" align="center">Чекаємо на ваше замовлення!;)<h1>
 	<h1 align="center" class="ok13">Ми тут!:  <a href="https://m.facebook.com/groups/2236061796705092/?ref=share" class="face">Facebook</a>  <a href="https://instagram.com/luka_roman86?igshid=NTc4MTIwNjQ2YQ==" class="insta">instagram!</a></h1>
