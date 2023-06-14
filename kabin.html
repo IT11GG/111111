@@ -5,21 +5,15 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <style>
+@media screen and (max-width: 920px) {
+  body{
+    background-image: url(fone1.jfif);
+  }
+}
 .button1 {
 	position: absolute;
 	top: 10px;
 	right: 10px;
-}
-.logo1{
-	position: absolute;
-	top: 2px;
-	left:3px;
-
-}
-.logo1 img {
-	height:150px;
-	width:170px;
-	object-fit: cover;
 }
 .desktop {
   text-decoration: none;
@@ -207,6 +201,13 @@ label a{
     text-decoration: none;
     color: #fff;
 }
+@media (max-width: 920px) {
+  .mobile{
+   font-size:14px;
+   height:60px;
+   width:80px;
+  }
+}
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js"></script>
@@ -214,14 +215,13 @@ label a{
 <body>
 
 <header class="ok1">
-	<div class="logo1">
-	<a href="prak.html"><img src="logo1.png"></a>
-	</div>
 	<div class="button1">
+		<a href="prak.html" class="desktop">Головна</a>
 		<a href="katal1.html" class="desktop">Каталог</a>
 		<a href="kabin.html" class="desktop">Мій кабінет</a>
-		<a href="zwazok1.html" class="desktop">зв'язок</a>
+		<a href="zwazok1.html" class="desktop">Зв'язок</a>
 		<div class="button2">
+		<a href="prak.html"><button class="mobile"><span>Головна</span></button></a>
 		<a href="katal1.html"><button class="mobile"><span>Каталог </span></button></a>
 		<a href="kabin.html"><button class="mobile"><span>Кабінет </span></button></a>
 		<a href="zwazok1.html"><button class="mobile"><span>Зв'язок </span></button></a>
@@ -231,22 +231,22 @@ label a{
         <div class="form-box">
             <div class="form-value">
                 <form action="zwazok1.html">
-                    <h2>Login</h2>
+                    <h2>Вхід</h2>
                     <div class="inputbox">
                         <ion-icon name="person-circle-outline"></ion-icon>
                         <input type="username" required>
-                        <label for="">Username</label>
+                        <label for="">Ім'я</label>
                     </div>
                     <div class="inputbox">
                         <ion-icon name="lock-closed-outline"></ion-icon>
                         <input type="password" required>
-                        <label for="">Password</label>
+                        <label for="">Пароль</label>
                     </div>
-                    <a href="zwazok1.html"><button type="submit">Log in</button></a>
+                    <a href="zwazok1.html"><button type="submit">Увійти</button></a>
                     <div class="bottom">
                         <div class="left">
                             <input type="checkbox" id="check">
-                            <label for="check">Remeber Me</label>
+                            <label for="check">Запамятати мене!</label>
                         </div>
                     </div>
                 </form>
