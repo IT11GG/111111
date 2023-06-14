@@ -126,17 +126,6 @@ img {
 	top: 10px;
 	right: 10px;
 }
-.logo1{
-	position: absolute;
-	top: 2px;
-	left:3px;
-
-}
-.logo1 img {
-	height:150px;
-	width:170px;
-	object-fit: cover;
-}
 .desktop {
   text-decoration: none;
   display: inline-block;
@@ -174,6 +163,13 @@ img {
   .desktop{
     display: none;
   }
+  @media (max-width: 920px) {
+  .mobile{
+   font-size:14px;
+   height:60px;
+   width:80px;
+  }
+}
   
   .mobile{
     display: block;
@@ -222,7 +218,7 @@ img {
 }
 body {
 	margin: 0;
-	background-image: url(fone.jfif);
+	background-image: url(images/fone.jfif);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -267,21 +263,42 @@ body {
 @media screen and (max-width: 480px) {
 .ok2 > img {width: 100%;}
 	body {display:block;}
+}
+@media screen and (max-width: 920px) {
+  body{
+    background-image: url(images/fone1.jfif);
+  }
+}
+@media (max-width: 1000px) {
+  .a-text, .inline-block, .mobile, .desktop{
+    display: none;
+  }
+}
+.errorphone{
+color:red;
+font-size: 17px;
+}
+@media (min-width: 1000px) {
+  .errorphone{
+    display: none;
+  }
+}
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js"></script>
 </head>
 <body>
-
+<h1 align="center" class="errorphone">Ойой...</h1>
+<p align="center" class="errorphone">На жаль через багато кількості багів на телефонах
+ ми вимушені були відключити цю вкладку до виправлення проблем:(</p>
 <header class="ok1">
-	<div class="logo1">
-	<a href="prak.html"><img src="logo1.png"></a>
-	</div>
 	<div class="button1">
+		<a href="prak.html" class="desktop">Головна</a>
 		<a href="katal1.html" class="desktop">Каталог</a>
 		<a href="kabin.html" class="desktop">Мій кабінет</a>
-		<a href="zwazok1.html" class="desktop">зв'язок</a>
+		<a href="zwazok1.html" class="desktop">Зв'язок</a>
 		<div class="button2">
+		<a href="prak.html"><button class="mobile"><span>Головна</span></button></a>
 		<a href="katal1.html"><button class="mobile"><span>Каталог </span></button></a>
 		<a href="kabin.html"><button class="mobile"><span>Кабінет </span></button></a>
 		<a href="zwazok1.html"><button class="mobile"><span>Зв'язок </span></button></a>
@@ -297,13 +314,13 @@ body {
     <input type="radio" name="slider" id="item-3" checked>
     <div class="cards">
       <label for="item-1" id="song-1" class="card">
-        <img src="meblkatal1.png">
+        <img src="images/meblkatal1.png">
       </label>
       <label for="item-2" id="song-2" class="card">
-        <img src="meblkatal2.png">
+        <img src="images/meblkatal2.png">
       </label>
       <label for="item-3" id="song-3" class="card">
-        <img src="meblkatal3.png">
+        <img src="images/meblkatal3.png">
       </label>
     </div>
   </div>
@@ -313,13 +330,13 @@ body {
     <input type="radio" name="slider" id="item-6" checked>
     <div class="cards">
       <label for="item-4" id="song-4" class="card">
-        <img src="meblkatal4.png">
+        <img src="images/meblkatal4.png">
       </label>
       <label for="item-5" id="song-5" class="card">
-        <img src="meblkatal5.png">
+        <img src="images/meblkatal5.png">
       </label>
       <label for="item-6" id="song-6" class="card">
-        <img src="meblkatal6.png">
+        <img src="images/meblkatal6.png">
       </label>
     </div>
   </div>
@@ -329,13 +346,13 @@ body {
     <input type="radio" name="slider" id="item-9" checked>
     <div class="cards">
       <label for="item-7" id="song-7" class="card">
-        <img src="meblkatal7.png">
+        <img src="images/meblkatal7.png">
       </label>
       <label for="item-8" id="song-8" class="card">
-        <img src="meblkatal8.png">
+        <img src="images/meblkatal8.png">
       </label>
       <label for="item-9" id="song-9" class="card">
-        <img src="meblkatal9.png">
+        <img src="images/meblkatal9.png">
       </label>
     </div>
   </div>
