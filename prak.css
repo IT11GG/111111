@@ -1,6 +1,6 @@
 body {
 	margin: 0;
-	background-image: url(fone.jfif);
+	background-image: url(images/fone.jfif);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -113,7 +113,7 @@ body {
   font-size: 28px;
   padding: 20px;
   width: 170px;
-  height:100px;
+  height:0px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
@@ -239,11 +239,21 @@ main {
 }
 @media screen and (max-width: 920px) {
   body{
-    background-image: url(fone1.jfif);
+    background-image: url(images/fone1.jfif);
   }
 }
 .textlol{
 	color:#1E90FF;
 	
 }
-
+@media (max-width: 920px) {
+  .mobile{
+   font-size:14px;
+   height:60px;
+   width:80px;
+  }
+}
+  @media (max-width: 600px) {
+	.text1{
+	font-size:14px;
+  }
